@@ -5,7 +5,7 @@ int main(){
 
     //Variaveis Carta1 & Carta 2
 
-    char estadoCarta1 , estadoCarta2;
+    char estadoCarta1, estadocarta2;
     char codigoCarta1[4], codigoCarta2[4];
     char cidadeCarta1[50], cidadeCarta2[50];
     unsigned long int populacaoCarta1, populacaoCarta2;
@@ -15,18 +15,14 @@ int main(){
 
     //Entrada dos Dados Carta 1
 
-    printf("Digite uma letra de 'A' a 'H': ");
+    printf("Digite o estado da carta: ");
     scanf(" %c", &estadoCarta1);
 
-    printf("Digite um codigo de 01 a 04: ");
+    printf("Digite um codigo da carta: ");
     scanf(" %s", &codigoCarta1);
 
-    getchar(); // consome o '\n' deixado pelo scanf
-
-
     printf("Digite o nome da cidade: ");
-    fgets(cidadeCarta1,50, stdin);
-    cidadeCarta1[strcspn(cidadeCarta1, "\n")] = '\0';
+    scanf(" %s", cidadeCarta1);
 
     printf("Digite a populacao: ");
     scanf(" %u", &populacaoCarta1);
@@ -51,16 +47,15 @@ int main(){
 
     printf("Insira os dados da carta 2\n");
 
-    printf("Digite uma letra de 'A' a 'H': ");
-    scanf(" %c", &estadoCarta2);
+    printf("Digite o estado da carta: ");
+    scanf(" %c", &estadocarta2);
 
-    printf("Digite um codigo de 01 a 04: ");
+    printf("Digite o codigo da carta: ");
     scanf(" %s", &codigoCarta2);
 
-    getchar(); // consome o '\n' deixado pelo scanf
 
     printf("Digite o nome da cidade: ");
-    fgets(cidadeCarta2,50, stdin);
+    scanf("%s", cidadeCarta2);
 
     printf("Digite a populacao: ");
     scanf(" %u", &populacaoCarta2);
@@ -81,11 +76,10 @@ int main(){
     float superPoderCarta2 = populacaoCarta2 + areaCarta2 + PIBCarta2 + pontosTuristicosCarta2 + PIBperCapitaCarta2 + densidadePopulacionalCarta2;
 
     //Saida dos dados carta 1
-    printf("\n");
+    printf("\n--------------------------------------\n");
     printf("Carta 1\n");
     printf("Estado: %c\n", estadoCarta1);
     printf("Codigo: %c%s\n",estadoCarta1, codigoCarta1);
-
     printf("Cidade: %s\n", cidadeCarta1);
     printf("Populaçaõ: %u\n", populacaoCarta1);
     printf("Area: %.2f\n", areaCarta1);
@@ -95,14 +89,14 @@ int main(){
     printf("PIB per Capita: %f\n", PIBperCapitaCarta1);
     printf("Super poder: %.2f\n", superPoderCarta1);
 
-    printf("\n");
+    printf("\n\n--------------------------------------\n");
 
     //Saida dos dados carta 2
 
     printf("Carta 2");
     printf("\n");
-    printf("Estado: %c\n", estadoCarta2);
-    printf("Codigo: %c%s\n",estadoCarta2, codigoCarta2);
+    printf("Estado: %c\n", estadocarta2);
+    printf("Codigo: %c%s\n",estadocarta2, codigoCarta2);
 
     printf("Cidade: %s\n", cidadeCarta2);
     printf("Populaçaõ: %u\n", populacaoCarta2);
@@ -113,10 +107,10 @@ int main(){
     printf("PIB per Capita: %f\n", PIBperCapitaCarta2);
     printf("Super poder: %.2f\n", superPoderCarta2);
 
-    printf("\n");
-
     //Comparação das Cartas
     int escolha1, escolha2, valor1, valor2, resultado;
+
+    printf("\n\n--------------------------------------\n");
 
     printf("Comparacao de cartas:\n");
     printf("Escolha a primeira carta que deseja comparar\n");
@@ -154,7 +148,9 @@ int main(){
         break;
     }
 
-
+    printf("\n\n--------------------------------------\n");
+    
+    
     printf("Escolha a segunda carta que deseja comparar\n");
     printf("Escolha 2: ");
     scanf("%d", &escolha2);

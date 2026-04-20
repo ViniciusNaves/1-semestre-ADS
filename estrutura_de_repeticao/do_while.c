@@ -5,9 +5,9 @@ int main (){
 
     do
     {
-        printf("Iniciando Contagem: %d\n", i);
+       printf("Iniciando Contagem: %d\n", i);
         i++;
-    } while (i < 5);
+    } while (i <= 5);
 
 
 }
